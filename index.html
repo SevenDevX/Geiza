@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Geiza Marketing Digital - Estratégias para impulsionar sua presença online." />
-  <meta name="theme-color" content="#000000" />
-
-  <title>Geiza Marketing Digital</title>
-
-  <!-- Pré-conexão para fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Metadados essenciais -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Geiza Stefany | Especialista em Marketing Digital, Gestão de Redes Sociais e Tráfego Pago.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SevenDevX - Davidson Dias">
   
-    <!-- Scripts -->
+  <!-- Open Graph (para redes sociais) -->
+  <meta property="og:title" content="Geiza Marketing Digital">
+  <meta property="og:description" content="Crie sua presença digital com uma especialista em estratégias digitais e redes sociais.">
+  <meta property="og:image" content="https://geiza.vercel.app/images/capa.webp">
+  <meta property="og:site_name" content="SevenDevX para Geiza Marketing">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://geiza.vercel.app/">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://geiza.vercel.app/">
+  
+  <!-- Favicon e manifest -->
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  
+  <!-- Título -->
+  <title>Geiza Marketing Digital</title>
+  
+  <!-- Pré-conexão para carregamento otimizado de fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos e scripts -->
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
-
 </head>
+
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ======================= HEADER ======================= -->
   <header class="site-header">
     <div class="container header-flex">
+      
+      <!-- Logotipo em texto: favorece acessibilidade e SEO -->
       <h1 class="logo">Geiza Marketing</h1>
 
+      <!-- Navegação principal com rótulo acessível -->
       <nav class="main-nav" id="menu" aria-label="Menu principal">
         <ul>
-  <li><a href="#hero">Início</a></li> <!-- Opcional -->
-  <li><a href="#geiza">Geiza</a></li> <!-- Adicionar ID à seção -->
-  <li><a href="#servicos">Serviços</a></li>
-  <li><a href="#portfolio">Projetos</a></li> <!-- Corrigido -->
-  <li><a href="#feedbacks">Feedbacks</a></li>
-  <li><a href="#sobre">Sobre</a></li>
-  <li><a href="#contato">Contato</a></li>
-</ul>
-      </nav> 
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#geiza">Geiza</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Projetos</a></li>
+          <li><a href="#feedbacks">Feedbacks</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
+      <!-- Botão do menu hambúrguer para navegação mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- ======================= MAIN CONTENT ======================= -->
   <main>
 
     <!-- HERO SECTION -->
@@ -58,26 +82,32 @@
         <a href="#contato" class="btn btn-primary">Fale Conosco</a>
       </div>
     </section>
-    
-    <!-- ===== SOBRE A GEIZA ===== -->
-<section id="geiza" class="geiza-section">
-  <div class="container geiza-grid">
-    <div class="geiza-foto" data-anima="scroll">
-      <img src="assets/images/geiza.jpg" alt="Geiza Stefany - Especialista em Marketing Digital" />
-    </div>
-    <div class="geiza-texto" data-anima="scroll">
-      <h2>Quem é Geiza Stefany?</h2>
-      <p>Geiza é especialista em marketing digital, com foco em estratégias que conectam marcas ao seu público. Criadora de soluções criativas que geram resultados reais, ela transforma ideias em presença digital marcante.</p>
-    </div>
-  </div>
-</section>
 
-    <!-- SERVICES SECTION -->
-    <section class="services-section" id="servicos">
+    <!-- Seção Geiza: apresentação da especialista -->
+    <section id="geiza" class="geiza-section">
+      <div class="container geiza-grid">
+
+        <!-- Foto com animação ao rolar -->
+        <div class="geiza-foto" data-anima="scroll">
+          <img src="assets/images/geiza.jpg" alt="Geiza Stefany - Especialista em Marketing Digital" />
+        </div>
+
+        <!-- Texto com animação ao rolar -->
+        <div class="geiza-texto" data-anima="scroll">
+          <h2>Quem é Geiza Stefany?</h2>
+          <p>Geiza é especialista em marketing digital, com foco em estratégias que conectam marcas ao seu público. Criadora de soluções criativas que geram resultados reais, ela transforma ideias em presença digital marcante.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION: cards com ícones SVG -->
+    <section id="servicos" class="services-section">
       <div class="container">
         <h2>Nossos Serviços</h2>
         <div class="service-cards">
 
+          <!-- Card 1: Marketing Digital -->
           <div class="card" data-anima="scroll">
             <div class="icon">
               <!-- Ícone de marketing -->
@@ -87,6 +117,7 @@
             <p>Soluções criativas e estratégias digitais para impulsionar sua presença online.</p>
           </div>
 
+          <!-- Card 2: Redes Sociais -->
           <div class="card" data-anima="scroll">
             <div class="icon">
               <!-- Ícone de social media -->
@@ -110,17 +141,17 @@ xml:space="preserve">
             <p>Gerenciamento profissional de Instagram, Facebook, TikTok e mais.</p>
           </div>
 
+          <!-- Card 3: Design Gráfico -->
           <div class="card" data-anima="scroll">
-            <div class="icon">
-              <!-- Ícone de design -->
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
-                <path d="M5 4h14a1 1 0 011 1v2H4V5a1 1 0 011-1zm15 4v10a1 1 0 01-1 1H5a1 1 0 01-1-1V8h16zm-6 2h-4v6h4v-6z"/>
-              </svg>
-            </div>
-            <h3>Design Gráfico</h3>
-            <p>Criação de identidade visual, logotipos, banners e materiais para web.</p>
-          </div>
-
+  <div class="icon">
+    <!-- Ícone de design -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+      <path d="M5 4h14a1 1 0 011 1v2H4V5a1 1 0 011-1zm15 4v10a1 1 0 01-1 1H5a1 1 0 01-1-1V8h16zm-6 2h-4v6h4v-6z" />
+    </svg>
+  </div>
+  <h3>Design Gráfico</h3>
+  <p>Criação de identidade visual, logotipos, banners e materiais para web.</p>
+</div>
         </div>
       </div>
     </section>
@@ -130,116 +161,114 @@ xml:space="preserve">
       <div class="container">
         <h2>Sobre Nós</h2>
         <p>Somos apaixonados por marketing digital e ajudar negócios a crescer. Vamos transformar seu projeto em sucesso online!</p>
+        <p>Este site foi idealizado e desenvolvido pela <strong>SevenDevX</strong>, empresa especializada em soluções web, parceira de confiança da Geiza em sua presença digital.</p>
       </div>
     </section>
-    
+
     <!-- ===== FEEDBACKS DE CLIENTES ===== -->
-<section class="feedbacks-section" id="feedbacks">
-  <div class="container">
-    <h2>O que dizem nossos clientes</h2>
-    <div class="feedbacks-grid">
-      <div class="feedback" data-anima="scroll">
-        “Meu Instagram nunca teve tanto engajamento. Geiza realmente entende de conteúdo que converte.”
-        <span>— Amanda R.</span>
+    <section id="feedbacks" class="feedbacks-section">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="feedbacks-grid">
+          <div class="feedback" data-anima="scroll">“Meu Instagram nunca teve tanto engajamento...” <span>— Amanda R.</span></div>
+          <div class="feedback" data-anima="scroll">“A identidade visual da minha marca ficou perfeita...” <span>— Lucas M.</span></div>
+          <div class="feedback" data-anima="scroll">“Geiza fez meu negócio crescer online...” <span>— Carla S.</span></div>
+        </div>
       </div>
-      <div class="feedback" data-anima="scroll">
-        “A identidade visual da minha marca ficou perfeita. Obrigado pela dedicação e criatividade!”
-        <span>— Lucas M.</span>
-      </div>
-      <div class="feedback" data-anima="scroll">
-        “Geiza fez meu negócio crescer online. Atendimento excelente, sempre atenta aos detalhes.”
-        <span>— Carla S.</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== PORTFÓLIO ===== -->
-<section class="portfolio-section" id="portfolio">
-  <div class="container">
-    <h2>Projetos Realizados</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item" data-anima="scroll">
-        <img src="assets/images/project1.jpg" alt="Projeto 1 - Identidade Visual" />
-        <p>Criação de logotipo e identidade visual para marca de cosméticos.</p>
+    <!-- ===== PORTFÓLIO ===== -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2>Projetos Realizados</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-anima="scroll">
+            <img src="assets/images/project1.jpg" alt="Projeto 1 - Identidade Visual" />
+            <p>Criação de logotipo...</p>
+          </div>
+          <div class="portfolio-item" data-anima="scroll">
+            <img src="assets/images/project2.jpg" alt="Projeto 2 - Social Media" />
+            <p>Gestão de redes sociais...</p>
+          </div>
+          <div class="portfolio-item" data-anima="scroll">
+            <img src="assets/images/project3.jpg" alt="Projeto 3 - Campanha Digital" />
+            <p>Campanha de tráfego pago...</p>
+          </div>
+        </div>
       </div>
-      <div class="portfolio-item" data-anima="scroll">
-        <img src="assets/images/project2.jpg" alt="Projeto 2 - Social Media" />
-        <p>Gestão de redes sociais para loja de moda feminina.</p>
-      </div>
-      <div class="portfolio-item" data-anima="scroll">
-        <img src="assets/images/project3.jpg" alt="Projeto 3 - Campanha Digital" />
-        <p>Campanha de tráfego pago para lançamento de curso online.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION: formulário acessível -->
     <section id="contato" class="contact-section">
       <div class="container">
         <h2>Entre em Contato</h2>
         <form id="contact-form" aria-label="Formulário de Contato">
           <label for="name">Nome</label>
           <input type="text" id="name" name="name" placeholder="Seu Nome" required />
-          
+
           <label for="email">E-mail</label>
           <input type="email" id="email" name="email" placeholder="Seu E-mail" required />
-          
+
           <label for="message">Mensagem</label>
           <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-          
+
           <button type="submit" class="btn btn-secondary">Enviar</button>
         </form>
       </div>
     </section>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="container footer-grid">
+
+      <!-- Informações da empresa -->
       <div>
         <h3>Geiza Marketing</h3>
         <p>Soluções digitais criativas para sua marca crescer online.</p>
       </div>
+
+      <!-- Links rápidos -->
       <div>
         <h4>Links</h4>
         <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#geiza">Geiza</a></li>
           <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Projetos</a></li>
+          <li><a href="#feedbacks">Feedbacks</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
+
+      <!-- Contatos -->
       <div>
-  <h4>Contato</h4>
-  <p>Email: <a href="mailto:geizastefany@gmail.com">geizastefany@gmail.com</a></p>
-  <p>WhatsApp: <a href="tel:+5531989371509">(31) 98937-1509</a></p>
-  <p>Instagram: <a href="https://instagram.com/geizastefanydeoliveira" target="_blank" rel="noopener">@geizastefanydeoliveira</a></p>
+        <h4>Contato</h4>
+        <p>Email: <a href="mailto:geizastefany@gmail.com">geizastefany@gmail.com</a></p>
+        <p>WhatsApp: <a href="tel:+5531989371509">(31) 98937-1509</a></p>
+        <p>Instagram: <a href="https://instagram.com/geizastefanydeoliveira" target="_blank" rel="noopener">@geizastefanydeoliveira</a></p>
+      </div>
 
-</div>
-</div>
-<div class="footer-copy">
-  <p>&copy; 2025 Geiza Marketing Digital. Todos os direitos reservados.</p>
-  <p>Desenvolvido por <a href="https://sevendevx.com" target="_blank" rel="noopener noreferrer">SevenDevX</a>.</p>
-</div>
-</footer>
+    </div>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5531989371509"
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener"
-     aria-label="Converse conosco no WhatsApp">
+    <!-- Créditos finais -->
+    <div class="footer-copy">
+      <p>&copy; 2025 Geiza Marketing Digital. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://sevendevx.com" target="_blank" rel="noopener noreferrer">SevenDevX</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante: WhatsApp -->
+  <a href="https://wa.me/5531989371509" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Converse conosco no WhatsApp">
     <img src="assets/icons/whatsapp.svg" alt="WhatsApp" loading="lazy" />
   </a>
-  <!-- BOTÃO FLUTUANTE INSTAGRAM -->
-  <a href="https://www.instagram.com/geizastefanydeoliveira" 
-   class="instagram-float"
-   target="_blank" 
-   rel="noopener" 
-   aria-label="Visite nosso Instagram">
-  <img src="assets/icons/instagram.svg" alt="Instagram" loading="lazy" />
-</a>
+
+  <!-- Botão flutuante: Instagram -->
+  <a href="https://www.instagram.com/geizastefanydeoliveira" class="instagram-float" target="_blank" rel="noopener" aria-label="Visite nosso Instagram">
+    <img src="assets/icons/instagram.svg" alt="Instagram" loading="lazy" />
+  </a>
 
 </body>
 </html>
