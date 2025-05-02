@@ -348,12 +348,14 @@ button.btn:hover {
 }
 
 .site-footer a {
-  color: #aaa;
+  color: var(--accent); /* ou use uma cor personalizada como #0af */
   text-decoration: none;
+  font-weight: 500;
 }
 
 .site-footer a:hover {
   color: var(--accent);
+  text-decoration: underline;
 }
 
 .footer-copy {
@@ -362,6 +364,13 @@ button.btn:hover {
   padding-top: 20px;
   color: #888;
 }
+
+.footer-copy p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
 
 /* ------------------------------
    ANIMAÇÕES
