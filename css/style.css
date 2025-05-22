@@ -11,23 +11,61 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #eee;
-  background-color: #0e0e10;
-}
-
 :root {
+  /* CORES */
   --bg-dark: #0e0e10;
+  --bg-light: #f4f4f4;
   --text-light: #ffffff;
-  --primary: #c84bff;
-  --accent: #ff79c6;
-  --header-bg: #18181b;
+  --text-dark: #0e0e10;
+  --text-muted: #888888;
+  --primary: #ffffff;
+  --second: #0e0e10;
+  --accent: #ffffff;
+  --primaryy: #888888;
+  --accentt: #333;
+  --header-bg: #0e0e10;
   --card-bg: #1e1e22;
   --border-color: #333;
+  --button-bg: #25d366;
+  --button-ba: #25d999;
+  --button-hover: #dddddd;
+  --highlight: #ffffff;
+
+  /* TIPOGRAFIA */
+  --font-primary: 'Poppins', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.4rem;
+  --font-size-xxl: 2.5rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* ESPAÇAMENTOS */
+  --spacing-xs: 6px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 60px;
+  --spacing-xxl: 80px;
+
+  /* BORDAS E EFEITOS */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 12px;
+  --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --box-shadow-dark: 0 8px 25px rgba(0, 0, 0, 0.3);
+  --transition-fast: 0.3s ease;
+  --transition-slow: 0.6s ease;
 }
 
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+}
+
+/* FOCUS */
 a:focus,
 button:focus {
   outline: 2px solid var(--accent);
@@ -49,17 +87,25 @@ button:focus {
 .site-header {
   background-color: var(--header-bg);
   color: var(--text-light);
-  padding: 14px 0;
+  padding: var(--spacing-md) 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--box-shadow-light);
 }
 
 .site-header .logo {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 1.2px;
+  color: var(--accent);
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
   color: var(--accent);
 }
 
@@ -71,14 +117,14 @@ button:focus {
 
 .main-nav {
   position: absolute;
-  top: 80px;
-  right: 20px;
+  top: var(--spacing-xxl); /* Aproximadamente 80px */
+  right: var(--spacing-md);
   background-color: var(--header-bg);
-  padding: 20px;
+  padding: var(--spacing-md);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
-  display: none; /* oculto por padrão */
-  z-index: 999; /* garante que fique acima de outros elementos */
+  border-radius: var(--border-radius-md);
+  display: none;
+  z-index: 999;
 }
 
 .main-nav.ativo {
@@ -87,15 +133,15 @@ button:focus {
 
 .main-nav ul {
   display: flex;
-  flex-direction: column; /* Adiciona isso */
+  flex-direction: column;
   list-style: none;
-  gap: 20px;
+  gap: var(--spacing-md);
 }
 
 .main-nav a {
   color: var(--text-light);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font-weight-normal);
 }
 
 .main-nav a:hover {
@@ -110,12 +156,12 @@ button:focus {
   align-items: center;
   width: 48px;
   height: 48px;
-  gap: 6px;
+  gap: var(--spacing-xs);
   border: none;
   background: transparent;
   cursor: pointer;
   z-index: 1100;
-  transition: transform 0.3s;
+  transition: var(--transition-fast);
 }
 
 .hamburger:hover {
@@ -128,7 +174,7 @@ button:focus {
   width: 28px;
   height: 2px;
   background-color: var(--text-light);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: var(--transition-fast);
   transform-origin: center;
 }
 
@@ -149,84 +195,79 @@ button:focus {
    HERO SECTION
 -------------------------------- */
 .hero-section {
-  background: linear-gradient(to bottom, #3f0d63, #7c1c90);
-  color: #fff;
+  background: linear-gradient(to bottom, var(--primaryy), var(--accentt));
+  color: var(--text-light);
   text-align: center;
-  padding: 100px 20px;
+  padding: var(--spacing-xxl) var(--spacing-md);
 }
 
 .hero-section h2 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  margin-bottom: 20px;
-  animation: fadeInUp 1s ease forwards;
+  font-size: clamp(var(--font-size-xl), 5vw, var(--font-size-xxl));
+  margin-bottom: var(--spacing-md);
 }
 
 .hero-section p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.3s;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-lg);
 }
 
 .hero-section .btn {
   display: inline-block;
-  padding: 12px 30px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: var(--accent);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+  background-color: var(--button-bg);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
   text-decoration: none;
-  transition: background 0.3s;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.6s;
+  transition: var(--transition-fast);
   box-shadow: 0 0 10px var(--accent);
 }
 
 .hero-section .btn:hover {
-  background-color: #e65caa;
+  background-color: var(--button-ba);
+  
 }
 
 /* ------------------------------
    SERVICES SECTION
 -------------------------------- */
 .services-section {
-  padding: 60px 20px;
-  background-color: var(--bg-dark);
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--bg-light);
 }
 
 .services-section h2 {
   text-align: center;
-  margin-bottom: 40px;
-  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-dark);
 }
 
 .service-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: var(--spacing-lg);
 }
 
 .card {
   background-color: var(--card-bg);
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--box-shadow-light);
+  transition: var(--transition-fast);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow-dark);
 }
 
 .card .icon {
   width: 70px;
   height: 70px;
-  margin: 0 auto 1.5rem;
-  background-color: var(--primary);
+  margin: 0 auto var(--spacing-md);
+  background-color: var(--second);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -236,32 +277,32 @@ button:focus {
 .card .icon svg {
   width: 32px;
   height: 32px;
-  fill: #fff;
+  fill: var(--text-light);
 }
 
 .card h3 {
-  font-size: 1.3rem;
+  font-size: var(--font-size-lg);
   color: var(--text-light);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .card p {
-  font-size: 1rem;
-  color: #ccc;
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
 }
 
 /* ------------------------------
    ABOUT SECTION
 -------------------------------- */
 .about-section {
-  padding: 60px 20px;
-  background-color: #121214;
+  padding: var(--spacing-xl) var(--spacing-md); /* Usando var(--spacing-xl) para 60px */
+  background-color: var(--bg-dark); /* Ajustando para uma cor do tema */
   color: var(--text-light);
 }
 
 .about-section h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
 }
 
 .about-section p {
@@ -274,14 +315,14 @@ button:focus {
    CONTACT SECTION
 -------------------------------- */
 .contact-section {
-  padding: 60px 20px;
-  background-color: #18181b;
+  padding: var(--spacing-xl) var(--spacing-md); /* Usando var(--spacing-xl) para 60px */
+  background-color: var(--header-bg); /* Usando var(--header-bg) para #18181b */
   color: var(--text-light);
 }
 
 .contact-section h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
 }
 
 form {
@@ -289,53 +330,57 @@ form {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--spacing-sm); /* Usando var(--spacing-sm) para 15px */
 }
 
 input,
 textarea {
-  padding: 12px;
-  border: 1px solid #444;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #222;
+  padding: var(--border-radius-lg); /* Aproximadamente 12px */
+  border: 1px solid var(--border-color); /* Usando var(--border-color) para #444 */
+  border-radius: var(--border-radius-md); /* Usando var(--border-radius-md) para 6px */
+  font-size: var(--font-size-base);
+  background-color: var(--card-bg); /* Usando var(--card-bg) para #222 */
   color: var(--text-light);
 }
 
 button.btn {
-  background-color: var(--primary);
-  color: #fff;
-  padding: 12px;
+  background-color: var(--button-bg);
+  color: var(--text-dark); /* Usando var(--text-light) para #fff */
+  padding: var(--border-radius-lg); /* Aproximadamente 12px */
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm); /* Usando var(--border-radius-sm) para 4px */
   cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 10px var(--accent);
+  font-size: var(--font-size-base);
 }
 
 button.btn:hover {
-  background-color: #e65caa;
+  background-color: var(--button-ba); /* Usando var(--button-hover) para #e65caa */
 }
 
 /* ------------------------------
    FOOTER
 -------------------------------- */
 .site-footer {
-  background: #1a1a1d;
-  color: #ccc;
-  padding: 60px 20px 30px;
+  background: var(--header-bg); /* Usando var(--header-bg) para #1a1a1d */
+  color: var(--text-muted); /* Usando var(--text-muted) para #ccc */
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg); /* Usando variáveis */
   font-size: 0.95rem;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
+  margin-bottom: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
 }
 
 .site-footer h3,
 .site-footer h4 {
   color: var(--text-light);
-  margin-bottom: 12px;
+  margin-bottom: var(--border-radius-lg); /* Aproximadamente 12px */
 }
 
 .site-footer ul {
@@ -344,11 +389,11 @@ button.btn:hover {
 }
 
 .site-footer ul li {
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* Mantido para precisão, pois não há variável exata */
 }
 
 .site-footer a {
-  color: var(--accent); /* ou use uma cor personalizada como #0af */
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
@@ -360,17 +405,16 @@ button.btn:hover {
 
 .footer-copy {
   text-align: center;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  color: #888;
+  border-top: 1px solid var(--border-color); /* Usando var(--border-color) para #333 */
+  padding-top: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+  color: var(--text-muted); /* Usando var(--text-muted) para #888 */
 }
 
 .footer-copy p {
   margin: 5px 0;
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-muted); /* Usando var(--text-muted) para #888 */
 }
-
 
 /* ------------------------------
    ANIMAÇÕES
@@ -389,7 +433,7 @@ button.btn:hover {
 [data-anima] {
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.6s ease;
+  transition: var(--transition-slow); /* Usando var(--transition-slow) para 0.6s ease */
 }
 
 [data-anima].ativo {
@@ -422,17 +466,17 @@ button.btn:hover {
 @media (max-width: 768px) {
   .main-nav {
     position: fixed;
-    top: 70px;
-    right: 20px;
-    background: linear-gradient(135deg, #1f1f22, #2c2c2e);
-    border-radius: 12px;
-    padding: 30px 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    top: 70px; /* Mantido fixo pois não há uma variável exata para esta altura */
+    right: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+    background: linear-gradient(135deg, #1f1f22, #2c2c2e); /* Mantido fixo pois não há variável exata */
+    border-radius: var(--border-radius-lg); /* Usando var(--border-radius-lg) para 12px */
+    padding: var(--spacing-lg) var(--spacing-md); /* Usando variáveis para 30px 20px */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); /* Mantido fixo para o efeito específico */
     width: 200px;
     opacity: 0;
     pointer-events: none;
     transform: translateX(50px);
-    transition: all 0.4s ease;
+    transition: all var(--transition-fast); /* Usando var(--transition-fast) para 0.4s ease */
     display: block; /* necessário no mobile */
     z-index: 1000;
   }
@@ -445,7 +489,7 @@ button.btn:hover {
 
   .main-nav ul {
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
     padding: 0;
     margin: 0;
   }
@@ -457,13 +501,13 @@ button.btn:hover {
   .main-nav a {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0; /* Mantido fixo para o padding do link */
   }
 }
 
 @media (max-width: 480px) {
   .site-header .logo {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Mantido fixo, pois não há uma variável menor que font-size-xl */
   }
 }
 
@@ -474,19 +518,19 @@ button.btn:hover {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #fff;
+  bottom: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+  right: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+  background-color: var(--button-bg); /* Usando var(--button-bg) para #25d366 */
+  color: var(--text-light); /* Usando var(--text-light) para #fff */
   border-radius: 50%;
   text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-size: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Mantido fixo para o efeito */
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transform: scale(0.5);
-  transition: all 0.4s ease;
+  transition: all var(--transition-fast); /* Usando var(--transition-fast) para 0.4s ease */
 }
 
 .whatsapp-float img {
@@ -506,16 +550,16 @@ button.btn:hover {
 -------------------------------- */
 .instagram-float {
   position: fixed;
-  bottom: 100px; /* Acima do botão do WhatsApp */
-  right: 20px;
+  bottom: calc(var(--spacing-md) + 60px + 20px); /* Acima do botão do WhatsApp: bottom + altura do whatsapp + espaçamento */
+  right: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
   width: 50px;
   height: 50px;
   z-index: 1000;
   opacity: 0;
   transform: scale(0.5);
-  transition: all 0.4s ease;
+  transition: all var(--transition-fast); /* Usando var(--transition-fast) para 0.4s ease */
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast); /* Usando var(--transition-fast) */
 }
 
 .instagram-float img {
@@ -528,6 +572,7 @@ button.btn:hover {
   visibility: visible;
   transform: scale(1);
 }
+
 
 .instagram-float.shaking {
   animation: shake 0.6s;
@@ -544,16 +589,16 @@ button.btn:hover {
 
 /* ===== GEIZA SECTION ===== */
 .geiza-section {
-  background: linear-gradient(135deg, #2d0036, #3a0050);
-  color: #fff;
-  padding: 80px 20px;
+  background: var(--bg-dark) linear-gradient(135deg); /* Mantido fixo pois não há variável exata */
+  color: var(--text-light);
+  padding: var(--spacing-xxl) var(--spacing-md); /* Usando variáveis para 80px 20px */
 }
 
 .geiza-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap: var(--spacing-xl); /* Usando var(--spacing-xl) para 40px */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -561,15 +606,15 @@ button.btn:hover {
 .geiza-foto img {
   width: 100%;
   max-width: 400px;
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg); /* Usando var(--border-radius-lg) para 12px */
   border: 4px solid var(--accent);
-  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent), 0 0 36px var(--accent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent), 0 0 36px var(--accent); /* Mantido fixo para o efeito */
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast); /* Usando var(--transition-fast) */
 }
 
 .geiza-foto img:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent), 0 0 60px var(--accent);
+  box-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent), 0 0 60px var(--accent); /* Mantido fixo para o efeito */
 }
 
 .geiza-texto {
@@ -577,85 +622,85 @@ button.btn:hover {
 }
 
 .geiza-texto h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff70d4;
+  font-size: var(--font-size-xxl); /* Usando var(--font-size-xxl) para 2.5rem */
+  margin-bottom: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+  color: var(--highlight); /* Usando var(--highlight) para #ff70d4 */
 }
 
 .geiza-texto p {
-  font-size: 1.2rem;
+  font-size: var(--font-size-lg); /* Usando var(--font-size-lg) para 1.2rem */
   line-height: 1.6;
-  color: #f5f5f5;
+  color: var(--bg-light); /* Usando var(--bg-light) para #f5f5f5 */
 }
 
 /* ===== FEEDBACKS SECTION ===== */
 .feedbacks-section {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 80px 20px;
+  background-color: var(--bg-dark); /* Usando var(--bg-dark) para #1a1a1a */
+  color: var(--text-light);
+  padding: var(--spacing-xxl) var(--spacing-md); /* Usando variáveis para 80px 20px */
   text-align: center;
 }
 
 .feedbacks-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ff70d4;
+  font-size: var(--font-size-xxl); /* Usando var(--font-size-xxl) para 2.5rem */
+  margin-bottom: var(--spacing-xl); /* Usando var(--spacing-xl) para 40px */
+  color: var(--highlight); /* Usando var(--highlight) para #ff70d4 */
 }
 
 .feedbacks-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
 }
 
 .feedback {
-  background-color: #2c2c2c;
-  border-left: 4px solid #ff70d4;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: var(--card-bg); /* Usando var(--card-bg) para #2c2c2c */
+  border-left: 4px solid var(--highlight); /* Usando var(--highlight) para #ff70d4 */
+  padding: var(--spacing-md); /* Usando var(--spacing-md) para 20px */
+  border-radius: var(--border-radius-md); /* Usando var(--border-radius-md) para 8px */
   font-style: italic;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mantido fixo para o efeito */
 }
 
 .feedback span {
   display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #ccc;
+  margin-top: 10px; /* Mantido fixo para precisão */
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted); /* Usando var(--text-muted) para #ccc */
 }
 
 /* ===== PORTFÓLIO SECTION ===== */
 .portfolio-section {
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 80px 20px;
+  background-color: var(--bg-light); /* Usando var(--bg-light) para #f4f4f4 */
+  color: var(--text-dark); /* Usando var(--text-dark) para #333 */
+  padding: var(--spacing-xxl) var(--spacing-md); /* Usando variáveis para 80px 20px */
   text-align: center;
 }
 
 .portfolio-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #800080;
+  font-size: var(--font-size-xxl); /* Usando var(--font-size-xxl) para 2.5rem */
+  margin-bottom: var(--spacing-xl); /* Usando var(--spacing-xl) para 40px */
+  color: var(--second); /* Usando var(--primary) para #800080 */
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: var(--spacing-lg); /* Usando var(--spacing-lg) para 30px */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .portfolio-item {
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: var(--text-light); /* Usando var(--text-light) para #fff */
+  border-radius: var(--border-radius-md); /* Usando var(--border-radius-md) para 8px */
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Mantido fixo para o efeito */
+  transition: transform var(--transition-fast); /* Usando var(--transition-fast) */
 }
 
 .portfolio-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px); /* Mantido fixo para o efeito */
 }
 
 .portfolio-item img {
@@ -665,6 +710,6 @@ button.btn:hover {
 }
 
 .portfolio-item p {
-  padding: 15px;
-  font-weight: 500;
+  padding: var(--spacing-sm); /* Usando var(--spacing-sm) para 15px */
+  font-weight: 500; /* Mantido fixo, pois não há variável para este peso exato */
 }
